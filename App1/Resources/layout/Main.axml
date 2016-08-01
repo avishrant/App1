@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="100">
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_weight="25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_marginBottom="25dp" />
+    <Button
+        android:text="login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/btnlogin"
+        android:layout_weight="15"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="20sp" />
+    <TextView
+        android:text="OR"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:id="@+id/txtOR" />
+    <Button
+        android:text="Sign Up"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="20sp"
+        android:id="@+id/btnsignup" />
+</LinearLayout>
