@@ -72,6 +72,9 @@ namespace App1
 			// aapt resource value: 0x7f020002
 			public const int logo = 2130837506;
 			
+			// aapt resource value: 0x7f020003
+			public const int splash_screen = 2130837507;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -86,7 +89,10 @@ namespace App1
 		{
 			
 			// aapt resource value: 0x7f070002
-			public const int btnDialogEmail = 2131165186;
+			public const int btndialoglogin = 2131165186;
+			
+			// aapt resource value: 0x7f070008
+			public const int btndialogsignup = 2131165192;
 			
 			// aapt resource value: 0x7f070004
 			public const int btnlogin = 2131165188;
@@ -162,6 +168,9 @@ namespace App1
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f050001
+			public const int Theme_Splash = 2131034113;
 			
 			// aapt resource value: 0x7f050000
 			public const int signupanimation = 2131034112;
