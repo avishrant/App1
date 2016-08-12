@@ -57,7 +57,7 @@ namespace App1
         }
         void gbtndialoglogin_Click(object sender, EventArgs e)
         {
-            //fragment signup button clicky clicky
+            //fragment login button clicky clicky
             gOnDialogLogin.Invoke(this, new OnDialogLogin(gTxtEmail.Text, gTxtPassword.Text));//invoking event, can also use OnDialogSing.Invoke
             this.Dismiss();
         }
