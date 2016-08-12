@@ -11,7 +11,7 @@ using Android.OS;
 
 namespace App1
 {
-    [Activity()]
+    [Activity(Label = "App1", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         private Button gbtnsignup; //global variable
@@ -26,10 +26,10 @@ namespace App1
             // Set our view from the "main" layout resource
 
 
-            gbtnlogin = FindViewById<Button>(Resource.Id.btnlogin);//login button, first
+           gbtnlogin = FindViewById<Button>(Resource.Id.btnlogin);//login button, first
             gbtnlogin.Click += (object sender, EventArgs e) =>
             {
-                //login fragment
+                //show login fragment
                 FragmentTransaction trans = FragmentManager.BeginTransaction();
                 dialoglogin logindialog = new dialoglogin();
                 logindialog.Show(trans, "fragment dialog");
@@ -41,38 +41,39 @@ namespace App1
 
             gbtnsignup.Click += (object sender, EventArgs e) =>      //need to subscribe to this event
             {
-                //signup fragment
+                //show signup fragment
                 FragmentTransaction trans = FragmentManager.BeginTransaction();//using events, do not want to use methods
                 dialogsignup signupdialog = new dialogsignup();
                 signupdialog.Show(trans, "fragment dialog");
 
                 signupdialog.gOnDialogSign += dialogsignup_gOnDialogSign;
             };
+
         }
         void logindialog_gOnDialogLogin(object sender, OnDialogLogin e)
         {
-           
+            Thread thread = new Thread(dummy);
+            thread.Start();
         }
 
-       
+
         void dialogsignup_gOnDialogSign(object sender, OnDialogSignup e)
         {
             // try making a global variable to instantiate the email and password fields, and try after that.
             //if it doesn't work, make a dummy thread, and proceed. 
+
+
+            Thread thread = new Thread(dummy);
+            
+        }
+            private void dummy()
+        {
+            Thread.Sleep(3000);
+        }
+            
+        }
+        }
         
-
-
-            using (StreamWriter writer = new StreamWriter("info.txt"))//Thread thread = new Thread(dummy);
-                                                                //thread.start();
-            //private void dummy() {Thread.Sleep(3000);}
-            {
-                writer.Write(e.Email);
-                writer.Write(e.FirstName);
-                writer.Write(e.Password);
-            }
-        }
-        }
-        }
         
     
 
